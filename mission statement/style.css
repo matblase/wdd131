@@ -1,0 +1,47 @@
+/* General page styling */
+body {
+  font-family: "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Keep content box constrained */
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+}
+
+/* Titles */
+header h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+header h2 {
+  color: #006EB6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs and lists */
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Footer logo */
+footer img {
+  width: 150px;
+  margin: 20px 0;
+}
