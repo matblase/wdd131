@@ -58,14 +58,14 @@ button#menu-button {
   font-size: 1.2em;
   cursor: pointer;
 }
-/* Two columns for medium screens */
+
 @media (min-width: 700px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Three columns + horizontal nav for large screens */
+
 @media (min-width: 1000px) {
   header {
     display: flex;
