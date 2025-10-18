@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A kids' book review blog for young readers." />
-  <meta name="author" content="Your Name" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A blog with book reviews for kids and teens">
+  <meta name="author" content="Your Name">
   <title>Kids Read for Fun</title>
-  <link rel="stylesheet" href="blog.css" />
+  <link rel="stylesheet" href="blog.css">
   <script src="blog.js" defer></script>
+  <!-- Optional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <!-- Accessibility: Skip to content link -->
+  <div class="skiptocontent">
+    <a href="#maincontent">Skip to main content</a>
+  </div>
+
   <header>
     <h1>Kids Read for Fun</h1>
     <nav>
@@ -22,27 +30,12 @@
   </header>
 
   <main id="maincontent">
-    <section class="articles">
-      <article>
-        <div class="details">
-          <p class="date">July 5, 2022</p>
-          <p class="age">10–14</p>
-          <p class="genre">Fantasy</p>
-          <p class="rating">★★★★☆</p>
-        </div>
-
-        <div class="content">
-          <h2>Septimus Heap Book One: Magyk</h2>
-          <img src="https://via.placeholder.com/200x250" alt="Book cover of Magyk">
-          <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus.</p>
-        </div>
-      </article>
+    <section class="articles" id="articles">
+      <!-- JavaScript will insert articles here -->
     </section>
 
     <aside class="filters">
-      <h3>Filters</h3>
-      <form>
-        <label for="sort">Sort:</label>
-        <select id="sort" nam
+      <h2>Filters</h2>
 
+  
 
