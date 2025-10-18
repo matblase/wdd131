@@ -4,74 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kids Read For Fun</title>
-  <style>
-    body {
-      background-color: #fce4ec; 
-      color: #001f3f;
-      font-family: "Georgia", serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      text-align: center;
-      padding: 1.5rem;
-      border-bottom: 2px solid #d8bfd8;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      border-top: 1px solid #d8bfd8;
-      border-bottom: 1px solid #d8bfd8;
-      padding: 0.75rem;
-      font-weight: bold;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #001f3f;
-    }
-
-    main {
-      width: 90%;
-      max-width: 900px;
-      margin: 2rem auto;
-    }
-
-    .article {
-      display: grid;
-      grid-template-columns: 120px auto;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid #d8bfd8;
-      padding-bottom: 1rem;
-    }
-
-    .article img {
-      width: 120px;
-      border-radius: 5px;
-    }
-
-    .article h2 {
-      color: #001f3f;
-      margin-bottom: 0.3rem;
-    }
-
-    .meta {
-      font-size: 0.9rem;
-      color: #002b5c;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      border-top: 2px solid #d8bfd8;
-      font-style: italic;
-      color: #001f3f;
-    }
-  </style>
+  <link rel="stylesheet" href="blog.css" />
 </head>
 <body>
   <header>
@@ -84,12 +17,55 @@
     <a href="#">Search</a>
   </nav>
 
-  <main id="articlesContainer">
-    <!-- JS  put articles here -->
+  <main>
+    <section class="articles" id="articles"></section>
+
+    <aside>
+      <h3>Filters</h3>
+      <label for="sort">Sort:</label>
+      <select id="sort">
+        <option value="">Select</option>
+      </select>
+
+      <label for="age">Age:</label>
+      <select id="age">
+        <option value="">Select</option>
+      </select>
+
+      <label for="genre">Genre:</label>
+      <select id="genre">
+        <option value="">Select</option>
+      </select>
+
+      <label for="rating">Rating:</label>
+      <select id="rating">
+        <option value="">Select</option>
+      </select>
+    </aside>
   </main>
 
-  <footer>End of Part One</footer>
-
   <script src="blog.js"></script>
+  <script>
+    const container = document.getElementById("articles");
+
+    articles.forEach(article => {
+      const html = `
+        <article>
+          <div>
+            <p>${article.date}</p>
+            <p>${article.ages}</p>
+            <p>${article.genre}</p>
+            <p>${article.stars}</p>
+          </div>
+          <div class="book-info">
+            <div class="book-title">${article.title}</div>
+            <img src="${article.imgSrc}" alt="${article.imgAlt}">
+            <p>${article.description}</p>
+          </div>
+        </article>
+      `;
+      container.insertAdjacentHTML("beforeend", html);
+    });
+  </script>
 </body>
 </html>
