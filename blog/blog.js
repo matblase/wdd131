@@ -38,4 +38,3 @@ const articles = [
     stars: '⭐⭐⭐⭐⭐'
   }
 ];
-
