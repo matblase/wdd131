@@ -20,33 +20,40 @@
     <section class="articles" id="articles"></section>
 
     <aside>
-      <p>Filter  will go here</p>
+      <p>Filter will go here</p>
     </aside>
   </main>
 
-  <script src="blog.js"></script>
+  <script src="blog.js" defer></script>
   <script>
     const container = document.getElementById("articles");
 
-    articles.forEach(article => {
-      const html = `
-        <article>
-          <div class="article-info">
-            <p>${article.date}</p>
-            <p>${article.ages}</p>
-            <p>${article.genre}</p>
-            <p>${article.stars}</p>
-          </div>
-          <div class="book-info">
-            <h2 class="book-title">${article.title}</h2>
-            <img src="${article.imgSrc}" alt="${article.imgAlt}">
-            <p>${article.description}</p>
-          </div>
-        </article>
-      `;
-      container.insertAdjacentHTML("beforeend", html);
-    });
+    function displayArticles(articles) {
+      articles.forEach(article => {
+        const html = `
+          <article class="article">
+            <div class="article-details">
+              <p class="article-date">${article.date}</p>
+              <ul>
+                <li>Ages: ${article.ages}</li>
+                <li>Genre: ${article.genre}</li>
+                <li>Rating: ${article.stars}</li>
+              </ul>
+            </div>
+            <div class="book-info">
+              <h2 class="book-title">${article.title}</h2>
+              <img src="${article.imgSrc}" alt="${article.imgAlt}">
+              <p>${article.description}</p>
+            </div>
+          </article>
+        `;
+        container.insertAdjacentHTML("beforeend", html);
+      });
+    }
+
+    displayArticles(articles);
   </script>
 </body>
 </html>
+
 
