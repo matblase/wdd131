@@ -18,7 +18,6 @@ header h1 {
   padding-bottom: 0.5rem;
 }
 
-
 nav {
   border-top: 2px solid #001f3f;   
   border-bottom: 2px solid #001f3f; 
@@ -36,49 +35,74 @@ nav a {
   font-size: 1.1rem;
 }
 
-
 main {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 1rem;
+  max-width: 1000px; 
+  margin: 0 auto;
   padding: 1rem 2rem;
 }
 
 .articles {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2rem; 
 }
 
-article {
-  border-bottom: 1px solid #001f3f;
-  padding-bottom: 1rem;
+
+.article {
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: 1rem;
+  border-bottom: 1px solid #001f3f;
+  padding-bottom: 1rem;
   align-items: start;
 }
 
-.article-info {
-  font-size: 0.9rem;
-  line-height: 1.4;
+
+.article-details {
+  text-align: right;
+  border-right: 2px solid #001f3f;
+  padding: 0 1rem;
+  line-height: 1.2;
 }
 
-article img {
-  width: 150px;
-  height: auto;
-  border: 2px solid #001f3f;
+.article-details .article-date {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
+
+.article-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-details ul li {
+  margin-bottom: 0.3rem;
+}
+
 
 .book-info {
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
 }
 
 .book-title {
   font-size: 1.3rem;
   font-weight: bold;
+  margin-top: 0; 
   margin-bottom: 0.5rem;
+}
+
+.book-info img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #001f3f;
 }
 
 aside {
@@ -90,12 +114,10 @@ aside {
 
 
 @media (max-width: 768px) {
-  
   header h1 {
     font-size: 1.6rem;
   }
 
-  
   nav {
     position: static;
     margin-top: 0.5rem;
@@ -107,28 +129,27 @@ aside {
     margin: 0 1rem;
   }
 
-  
   main {
     grid-template-columns: 1fr;
+    padding: 1rem;
   }
 
-  
   article {
     grid-template-columns: 1fr;
   }
 
-  
-  article img {
-    display: block;
-    margin: 0 auto;
+  .article-details {
+    text-align: left;
+    border-right: none;
+    border-bottom: 2px solid #001f3f;
+    padding: 0 0 0.5rem 0;
+    margin-bottom: 0.5rem;
   }
 
-  
-  main {
-    padding: 1rem;
+  .book-info img {
+    margin: 0.5rem auto;
   }
 }
-
 
 @media (max-width: 480px) {
   header h1 {
@@ -143,5 +164,6 @@ aside {
     font-size: 0.95rem;
   }
 }
+
 
 
