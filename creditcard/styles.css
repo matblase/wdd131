@@ -20,7 +20,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Shared card styles */
+
 .card {
   position: absolute;
   width: 100%;
@@ -32,7 +32,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* FRONT */
+
 .card-front {
   z-index: 2;
 }
@@ -74,7 +74,7 @@ body {
   gap: 5px;
 }
 
-/* BACK */
+
 .card-back {
   top: 20px;
   left: 20px;
@@ -101,7 +101,7 @@ body {
   border: 1px solid #999;
 }
 
-/* Submit button */
+
 button {
   padding: 10px 20px;
   background-color: white;
