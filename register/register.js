@@ -1,6 +1,6 @@
 let participantCount = 1;
 
-// Function to create a new participant section
+
 function participantTemplate(count) {
   return `
     <section class="participant${count}">
@@ -43,7 +43,7 @@ function participantTemplate(count) {
   `;
 }
 
-// Add Participant button functionality
+
 document.getElementById('add').addEventListener('click', () => {
   participantCount++;
   const addBtn = document.getElementById('add');
@@ -54,8 +54,10 @@ document.getElementById('add').addEventListener('click', () => {
 document.querySelector('form').addEventListener('submit', (event) => {
   event.preventDefault();
 
+
   const adultName = document.getElementById('adult_name').value;
 
+ 
   const feeElements = [...document.querySelectorAll("[id^='fee']")];
   const totalFees = feeElements.reduce((sum, el) => sum + Number(el.value), 0);
 
@@ -67,4 +69,3 @@ document.querySelector('form').addEventListener('submit', (event) => {
   summary.innerText = `Thank you ${adultName} for registering. You have registered ${participantCount} participants and owe $${totalFees} in Fees.`;
   summary.style.display = 'block';
 });
-
