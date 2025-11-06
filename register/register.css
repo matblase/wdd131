@@ -154,6 +154,18 @@
   button:hover {
     background: #00b33c;
   }
+.participants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+#add {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
   @media (max-width: 568px) {
     .columns div {
       width: 100%;
