@@ -208,4 +208,20 @@ footer img {
     object-fit: cover;
     display: block;
 }
+.recipe-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.recipe-details {
+    flex: 1;
+}
+
+.recipe-content img {
+    width: 300px;
+    max-width: 40%;
+    border-radius: 12px;
+    object-fit: cover;
+}
 
