@@ -5,8 +5,11 @@
   --text-light: #fff;
   --border-color: #ddd;
   --primary-font: Arial, Helvetica, sans-serif;
+  /* optional secondary font variable left empty (do not use an inaccessible decorative font) */
+  --secondary-font: "Arial";
 }
 
+/* RESET / GLOBAL */
 * {
   margin: 0;
   padding: 0;
@@ -14,16 +17,16 @@
 }
 
 body {
-  font-family: var;
+  font-family: var(--primary-font);
   background-color: #fff;
-  color: var;
+  color: var(--text-dark);
   line-height: 1.5;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-
+/* MAIN WRAPPER */
 main {
   flex: 1;
   width: 100%;
@@ -32,14 +35,14 @@ main {
   padding: 20px;
 }
 
-
+/* HEADER */
 header {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: var;
-  color: var;
+  background-color: var(--primary-color);
+  color: var(--text-light);
   padding: 8px 16px;
   line-height: 1;
 }
@@ -54,7 +57,7 @@ header h1 {
   font-weight: 500;
 }
 
-
+/* SEARCH SECTION */
 .search-section {
   text-align: center;
   margin: 20px auto;
@@ -77,17 +80,18 @@ header h1 {
 .search-bar input {
   padding: 8px 12px;
   width: 250px;
-  border: 1px solid var;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   font-size: 1rem;
 }
 
 .search-bar input:focus {
-  outline: 2px solid var;
+  outline: 3px solid rgba(0,0,0,0.06);
+  box-shadow: 0 0 0 3px rgba(76,175,80,0.12); /* subtle focus ring */
 }
 
 .search-bar button {
-  background-color: var;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 6px;
   padding: 6px;
@@ -95,6 +99,7 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--text-light);
 }
 
 .search-bar button img {
@@ -102,7 +107,7 @@ header h1 {
   height: 20px;
 }
 
-
+/* RECIPE LIST / CARD (grid for multiple cards) */
 .recipe-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -111,8 +116,8 @@ header h1 {
 }
 
 .recipe-card {
-  border: 1px solid var;
-  background-color: var;
+  border: 1px solid var(--border-color);
+  background-color: var(--secondary-color);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease;
@@ -132,33 +137,69 @@ header h1 {
   padding: 12px 15px;
   font-size: 1.2rem;
   background-color: #fff;
-  border-bottom: 1px solid var;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .recipe-card p {
   padding: 10px 15px;
 }
 
+/* RECIPE DETAIL - FLEX LAYOUT (image left, text right on wide screens) */
+.recipe {
+  margin-top: 16px;
+}
 
-.recipe-detail img {
+/* container that holds image + details */
+.recipe-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-direction: column; /* default stacked for mobile */
+}
+
+/* details column takes remaining width */
+.recipe-details {
+  flex: 1;
+}
+
+/* recipe images responsive and capped */
+.recipe img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
 }
 
-.recipe-detail h2 {
-  margin-bottom: 15px;
+/* On larger viewports: switch to side-by-side (image left, text right) */
+@media (min-width: 700px) {
+  .recipe-content {
+    flex-direction: row;
+  }
+
+  .recipe-content img {
+    width: 300px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* show the description paragraph on larger screens per spec */
+  .recipe-details p.description {
+    display: block;
+  }
 }
 
-.recipe-detail ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
+/* On small screens hide the description paragraph (spec requirement) */
+.recipe-details p.description {
+  display: none;
 }
 
-
+/* footer */
 footer {
-  background-color: var;
-  border-top: 1px solid var;
+  background-color: var(--secondary-color);
+  border-top: 1px solid var(--border-color);
   text-align: center;
 
   display: flex;
@@ -168,7 +209,7 @@ footer {
 
   padding: 10px 0;
   font-size: 0.9rem;
-  color: var;
+  color: var(--text-dark);
   line-height: 1.2;
 }
 
@@ -187,7 +228,7 @@ footer img {
   opacity: 0.8;
 }
 
-
+/* GRID BREAKPOINTS FOR MULTIPLE CARDS */
 @media (min-width: 600px) {
   .recipe-list {
     grid-template-columns: repeat(2, 1fr);
@@ -199,29 +240,3 @@ footer img {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-.recipe img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    display: block;
-}
-.recipe-content {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-}
-
-.recipe-details {
-    flex: 1;
-}
-
-.recipe-content img {
-    width: 300px;
-    max-width: 40%;
-    border-radius: 12px;
-    object-fit: cover;
-}
-
