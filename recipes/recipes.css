@@ -5,11 +5,10 @@
   --text-light: #fff;
   --border-color: #ddd;
   --primary-font: Arial, Helvetica, sans-serif;
-  /* optional secondary font variable left empty (do not use an inaccessible decorative font) */
   --secondary-font: "Arial";
 }
 
-/* RESET / GLOBAL */
+
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +25,7 @@ body {
   min-height: 100vh;
 }
 
-/* MAIN WRAPPER */
+
 main {
   flex: 1;
   width: 100%;
@@ -35,7 +34,7 @@ main {
   padding: 20px;
 }
 
-/* HEADER */
+
 header {
   display: flex;
   align-items: center;
@@ -57,7 +56,6 @@ header h1 {
   font-weight: 500;
 }
 
-/* SEARCH SECTION */
 .search-section {
   text-align: center;
   margin: 20px auto;
@@ -87,7 +85,7 @@ header h1 {
 
 .search-bar input:focus {
   outline: 3px solid rgba(0,0,0,0.06);
-  box-shadow: 0 0 0 3px rgba(76,175,80,0.12); /* subtle focus ring */
+  box-shadow: 0 0 0 3px rgba(76,175,80,0.12);
 }
 
 .search-bar button {
@@ -107,7 +105,7 @@ header h1 {
   height: 20px;
 }
 
-/* RECIPE LIST / CARD (grid for multiple cards) */
+
 .recipe-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -144,25 +142,21 @@ header h1 {
   padding: 10px 15px;
 }
 
-/* RECIPE DETAIL - FLEX LAYOUT (image left, text right on wide screens) */
 .recipe {
   margin-top: 16px;
 }
 
-/* container that holds image + details */
 .recipe-content {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
-  flex-direction: column; /* default stacked for mobile */
+  flex-direction: column;
 }
 
-/* details column takes remaining width */
 .recipe-details {
   flex: 1;
 }
 
-/* recipe images responsive and capped */
 .recipe img {
   width: 100%;
   max-width: 100%;
@@ -172,7 +166,6 @@ header h1 {
   display: block;
 }
 
-/* On larger viewports: switch to side-by-side (image left, text right) */
 @media (min-width: 700px) {
   .recipe-content {
     flex-direction: row;
@@ -185,18 +178,15 @@ header h1 {
     border-radius: 12px;
   }
 
-  /* show the description paragraph on larger screens per spec */
   .recipe-details p.description {
     display: block;
   }
 }
 
-/* On small screens hide the description paragraph (spec requirement) */
 .recipe-details p.description {
   display: none;
 }
 
-/* footer */
 footer {
   background-color: var(--secondary-color);
   border-top: 1px solid var(--border-color);
@@ -228,7 +218,6 @@ footer img {
   opacity: 0.8;
 }
 
-/* GRID BREAKPOINTS FOR MULTIPLE CARDS */
 @media (min-width: 600px) {
   .recipe-list {
     grid-template-columns: repeat(2, 1fr);
