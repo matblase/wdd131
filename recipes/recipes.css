@@ -14,9 +14,9 @@
 }
 
 body {
-  font-family: var(--primary-font);
+  font-family: var;
   background-color: #fff;
-  color: var(--text-dark);
+  color: var;
   line-height: 1.5;
   display: flex;
   flex-direction: column;
@@ -38,8 +38,8 @@ header {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: var(--primary-color);
-  color: var(--text-light);
+  background-color: var;
+  color: var;
   padding: 8px 16px;
   line-height: 1;
 }
@@ -77,17 +77,17 @@ header h1 {
 .search-bar input {
   padding: 8px 12px;
   width: 250px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var;
   border-radius: 6px;
   font-size: 1rem;
 }
 
 .search-bar input:focus {
-  outline: 2px solid var(--primary-color);
+  outline: 2px solid var;
 }
 
 .search-bar button {
-  background-color: var(--primary-color);
+  background-color: var;
   border: none;
   border-radius: 6px;
   padding: 6px;
@@ -111,8 +111,8 @@ header h1 {
 }
 
 .recipe-card {
-  border: 1px solid var(--border-color);
-  background-color: var(--secondary-color);
+  border: 1px solid var;
+  background-color: var;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease;
@@ -132,7 +132,7 @@ header h1 {
   padding: 12px 15px;
   font-size: 1.2rem;
   background-color: #fff;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var;
 }
 
 .recipe-card p {
@@ -157,8 +157,8 @@ header h1 {
 
 
 footer {
-  background-color: var(--secondary-color);
-  border-top: 1px solid var(--border-color);
+  background-color: var;
+  border-top: 1px solid var;
   text-align: center;
 
   display: flex;
@@ -168,7 +168,7 @@ footer {
 
   padding: 10px 0;
   font-size: 0.9rem;
-  color: var(--text-dark);
+  color: var;
   line-height: 1.2;
 }
 
@@ -200,4 +200,12 @@ footer img {
   }
 }
 
+.recipe img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+}
 
