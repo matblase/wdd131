@@ -9,7 +9,7 @@ Fonts are separated by a | */
   --secondary-color: #C8E0F4;
   --accent1-color: #165047;
   --accent2-color: #001C55;
-  --accent3-color: #806443; /*im just leaving it here so that i can remember it but i won't actually mess with the css
+  /* accent3: #806443; im just leaving it here so that i can remember it but i won't actually mess with the css
 
   /* change the values below to your chosen font(s) */
   --heading-font: "IM Fell French Canon SC";
