@@ -92,9 +92,9 @@ footer {
     color: white;
 }
 
-.footer-logo {
-    width: 60px;
-    margin-bottom: 0.5rem;
+footer img {
+  width: 150px;
+  margin: 20px 0;
 }
 
 /* ===== RESPONSIVE ===== */
