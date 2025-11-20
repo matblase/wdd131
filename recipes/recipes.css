@@ -218,14 +218,3 @@ footer img {
   opacity: 0.8;
 }
 
-@media (min-width: 600px) {
-  .recipe-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 960px) {
-  .recipe-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
