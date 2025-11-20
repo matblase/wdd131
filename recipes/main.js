@@ -1,11 +1,11 @@
 import recipes from "./recipes.mjs";
 
-// ======= DOM ELEMENTS =======
+
 const recipeDisplay = document.getElementById("recipe-display");
 const searchInput = document.getElementById("search");
 const searchBtn = document.getElementById("searchBtn");
 
-// ======= RANDOM FUNCTIONS =======
+
 function getRandomNumber(max) {
   return Math.floor(Math.random() * max);
 }
@@ -14,7 +14,7 @@ function getRandomListEntry(list) {
   return list[getRandomNumber(list.length)];
 }
 
-// ======= TEMPLATE FUNCTIONS =======
+
 function tagsTemplate(tags) {
   return tags.map(tag => `<li class="tag">${tag}</li>`).join('');
 }
@@ -47,12 +47,12 @@ function recipeTemplate(recipe) {
   `;
 }
 
-// ======= RENDER FUNCTIONS =======
+
 function renderRecipes(recipeList) {
   recipeDisplay.innerHTML = recipeList.map(recipeTemplate).join('');
 }
 
-// ======= SEARCH FUNCTIONS =======
+
 function filterRecipes(query) {
   const filtered = recipes.filter(recipe => {
     const nameMatch = recipe.name.toLowerCase().includes(query);
@@ -76,13 +76,13 @@ function searchHandler(e) {
   }
 }
 
-// ======= EVENT LISTENERS =======
+
 searchBtn.addEventListener('click', searchHandler);
 searchInput.addEventListener('keyup', (e) => {
   if (e.key === 'Enter') searchHandler(e);
 });
 
-// ======= INITIALIZE PAGE =======
+
 function init() {
   const randomRecipe = getRandomListEntry(recipes);
   renderRecipes([randomRecipe]);
