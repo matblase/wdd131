@@ -25,16 +25,20 @@
     </header>
 
     <main>
-        <section class="search-section" aria-labelledby="search-label">
-            <label id="search-label" for="search">Find a Recipe!</label>
+         <section class="search-section" aria-labelledby="search-label">
+        <label id="search-label" for="search">Find a Recipe!</label>
 
-            <div class="search-bar">
-                <input type="text" id="search" placeholder="Search recipes..." />
-                <button id="searchBtn" aria-label="Search recipes">
-                    <img src="images/search.svg" alt="" aria-hidden="true" />
-                </button>
-            </div>
-        </section>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search recipes..." />
+            <button id="searchBtn" aria-label="Search recipes">
+                <img src="images/search.svg" alt="" aria-hidden="true" />
+            </button>
+        </div>
+    </section>
+
+    <section id="recipe-display" class="recipe-list" aria-live="polite">
+       
+    </section>
 
         <section id="recipe-display" class="recipe" aria-live="polite">
             <div class="recipe-content">
