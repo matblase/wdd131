@@ -1,28 +1,13 @@
-import { tips } from "./data.js";
+import { climateFacts } from "./data.js";
 
-// DOM selections
-const tipsList = document.getElementById("tips-list");
-const randomBtn = document.getElementById("random-tip");
+// Select DOM elements
+const factBtn = document.querySelector("#fact-btn");
+const factDisplay = document.querySelector("#fact-display");
 
-// Display all tips (array method: forEach)
-if (tipsList) {
-    tips.forEach(t => {
-        const li = document.createElement("li");
-        li.textContent = t.tip;
-        tipsList.appendChild(li);
-    });
-}
-
-// Show a random tip (event listener + conditional branching)
-if (randomBtn) {
-    randomBtn.addEventListener("click", () => {
-        const randomTip = tips[Math.floor(Math.random() * tips.length)];
-
-        alert(`💡 Tip: ${randomTip.tip}`);
-        if (randomTip.impact >= 3) {
-            console.log("High impact action!");
-        } else {
-            console.log("Still helpful, keep going!");
-        }
-    });
+// Event listener + conditional display logic
+if (factBtn) {
+  factBtn.addEventListener("click", () => {
+    const randomFact = climateFacts[Math.floor(Math.random() * climateFacts.length)];
+    factDisplay.innerHTML = `${randomFact.text} <br><a href="${randomFact.source}" target="_blank">Learn more</a>`;
+  });
 }
