@@ -8,8 +8,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #DDE0BD;
-  color: #165047;
+  background-color: #C8E0F4;
+  color: #001C55;
 }
 
 
@@ -18,7 +18,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #C8E0F4;
+  background-color: #001C55;
   flex-wrap: wrap; 
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .nav-links a {
-  color: #001C55;
+  color: #C8E0F4;
   text-decoration: none;
   font-weight: bold;
 }
@@ -64,7 +64,7 @@ body {
 .hero {
   text-align: center;
   padding: 2rem;
-  background-color: #165047;
+  background-color: #DDE0BD;
 }
 
 
@@ -76,7 +76,7 @@ body {
 
 .content h2 {
   margin-bottom: 1rem;
-  color: #2e8b57;
+  color: #165047;
 }
 
 .content p,
