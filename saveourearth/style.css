@@ -8,8 +8,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #DDE0BD;
+  color: #165047;
 }
 
 
@@ -18,8 +18,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #2e8b57;
-  flex-wrap: wrap; /* keeps it responsive */
+  background-color: #C8E0F4;
+  flex-wrap: wrap; 
 }
 
 
@@ -32,7 +32,7 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: #001C55;
   text-decoration: none;
   font-weight: bold;
 }
@@ -64,7 +64,7 @@ body {
 .hero {
   text-align: center;
   padding: 2rem;
-  background-color: #98fb98;
+  background-color: #165047;
 }
 
 
@@ -125,7 +125,7 @@ button {
 
 
 footer {
-  background-color: #2e8b57;
+  background-color: #001C55;
   color: white;
   text-align: center;
   padding: 1rem;
