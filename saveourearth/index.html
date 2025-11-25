@@ -3,44 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Save Our Earth: Raising awareness about climate change and promoting sustainability.">
-  <title>Save Our Earth</title>
+  <title>Save Our Earth - Home</title>
   <link rel="stylesheet" href="style.css">
   <script type="module" src="main.js" defer></script>
 </head>
-
 <body>
+ 
+  <header>
+    <nav class="navbar">
+      <img src="Fortune Green.png" alt="Logo" class="logo">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="impact.html">Impact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <img src="Fortune Green.png" alt="Save Our Earth Logo" class="logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="impact.html">How to Help</a>
-  </nav>
-</header>
 
-<main>
   <section class="hero">
-    <h1>Save Our Earth</h1>
-    <p>We have a duty to leave the Earth better than how we found it. As humans, we must do our best to care for our home. My Sustainability site will introduce you into the world of environmental stewardship.</p>
-    <p>In this site, you will find reliable information and resources to help you become a better steward of the Earth. This will range from individual impact, community and cities, and governmental impacts.</p>
-    <p>Our care for the Earth is a moral obligation.</p>
+    <h1>Welcome to Save Our Earth</h1>
+    <p> We have a duty to leave the Earth better than how we found it. As humans, we must do our best to care for our home. My Sustainability site will introduce you into the world of environmental stewardship. 
+				In this site, you will find reliable information and resources to help you become a better steward of the Earth. This will range from individual impact, community and cities, and governmental impacts. 
+				Our care for the Earth is a moral obligation.
+      Learn about climate change, its causes, and what you can do to help preserve our planet.</p>
   </section>
 
-  <p>This section will include resources, statistics, and information from trusted organizations such as <a href="https://www.greenpeace.org" target="_blank">Greenpeace</a> and <a href="https://www.nationalgeographic.com/environment" target="_blank">National Geographic</a>. More details will be added soon.</p>
 
+  <section class="content">
+    <h2>What is Climate Change?</h2>
+    <p>
+      Climate change refers to long-term shifts in global temperatures and weather patterns. 
+      While natural processes can cause climate fluctuations, current rapid changes are primarily driven by human activities. 
+      Learn more at <a href="https://climate.nasa.gov/" target="_blank">NASA Climate Change</a>.
+    </p>
 
-  <section class="fact-box">
-    <h2>Want to learn more?</h2>
-    <button id="fact-btn">Reveal a Climate Fact</button>
-    <p id="fact-display"></p>
+    <h2>Why Climate Change Matters</h2>
+    <p>
+      Climate change affects ecosystems, human health, and economies worldwide. 
+      Rising temperatures lead to more frequent extreme weather events, loss of biodiversity, and threats to food and water security. 
+      The <a href="https://www.ipcc.ch/report/ar6/wg1/" target="_blank">IPCC Sixth Assessment Report</a> provides detailed findings.
+    </p>
+
+    <h2>Key Greenhouse Gases</h2>
+    <ul>
+      <li><strong>Carbon dioxide (CO₂):</strong> Produced by burning fossil fuels, deforestation, and industry.</li>
+      <li><strong>Methane (CH₄):</strong> Emitted from agriculture, landfills, and fossil fuel extraction.</li>
+      <li><strong>Nitrous oxide (N₂O):</strong> Released from fertilizers and industrial processes.</li>
+      <li><strong>Fluorinated gases:</strong> Synthetic gases used in refrigerants and industry.</li>
+    </ul>
+
+    <h2>Global Warming Trends</h2>
+    <p>
+      Earth’s average surface temperature has risen about 1.2°C since 1880. Ice sheets are shrinking, sea levels are rising, and extreme heat events are increasing. 
+      Data from <a href="https://climate.nasa.gov/vital-signs/global-temperature/" target="_blank">NASA Global Temperature</a> show the trends.
+    </p>
+
+    <h2>Interactive Facts</h2>
+    <p>Here are some important climate facts collected from trusted sources:</p>
+    <!-- The dynamic fact list from JS will appear here -->
   </section>
-</main>
 
-<footer>
-  <img src="Fortune Green.png" alt="Logo small" class="footer-logo">
-  <p>this is a personal site for WDD131</p>
-</footer>
+
+  <section class="slideshow">
+    <h2>Climate Change in Action</h2>
+    <div class="slides-container">
+      <img src="images/climate1.jpg" class="slide" alt="Melting glaciers">
+      <img src="images/climate2.jpg" class="slide" alt="Forest fires">
+      <img src="images/climate3.jpg" class="slide" alt="Rising sea levels">
+    </div>
+    <button id="prevBtn">&#10094;</button>
+    <button id="nextBtn">&#10095;</button>
+  </section>
+
+
+  <footer>
+    <img src="Fortune Green.png" alt="Logo" class="footer-logo">
+    <p>This is my personal website for a class assignment.</p>
+  </footer>
 
 </body>
 </html>
+
