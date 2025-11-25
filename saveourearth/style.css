@@ -1,106 +1,76 @@
-/* =============== ROOT VARIABLES (ADD YOUR COLORS + FONTS) =============== */
-:root {
-    --primary-color: #2E8B57; /* change */
-    --secondary-color: #F0F8EA; /* change */
-    --accent-color: #3DBE29; /* change */
-    --text-color: #222;
-    --font-family: 'Arial', sans-serif; /* change font */
-}
-
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
-    font-family: var(--font-family);
-    color: var(--text-color);
-    line-height: 1.6;
-    background-color: var(--secondary-color);
+  margin: 0;
+  font-family: "Times New Roman", serif;
+  text-align: center;
+  background-color: #C8E0F4;
+  color: #001C55;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background: var(--primary-color);
+
+header {
+  background-color: #165047;
+  padding: 10px;
+  color: white;
 }
 
 .logo {
-    width: 80px;
+  width: 120px;
+  display: block;
+  margin: 0 auto;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+nav a:hover {
+  text-decoration: underline;
 }
 
-.nav-links a.active,
-.nav-links a:hover {
-    text-decoration: underline;
-}
 
-/* ===== HERO ===== */
 .hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background-image: url('../images/hero-background.jpg'); /* optional */
-    background-size: cover;
-    background-position: center;
-    color: white;
+  padding: 30px;
+  background-color: #DDE0BD;
+  margin: 20px;
+  border-radius: 15px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.7rem 1.4rem;
-    background: var(--accent-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
+
+.fact-box {
+  background-color: #DDE0BD;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 15px;
 }
 
-/* ===== SECTION STYLING ===== */
-.content-section {
-    padding: 2rem;
-    max-width: 900px;
-    margin: auto;
+#fact-btn {
+  padding: 10px 20px;
+  background-color: #165047;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.content-section img {
-    max-width: 100%;
-    display: block;
-    margin-top: 1rem;
+#fact-btn:hover {
+  background-color: #001C55;
 }
 
-/* ===== FOOTER ===== */
+
 footer {
-    text-align: center;
-    padding: 2rem;
-    background: var(--primary-color);
-    color: white;
+  background-color: #165047;
+  color: white;
+  padding: 10px;
+  margin-top: 40px;
 }
 
-footer img {
-  width: 150px;
-  margin: 20px 0;
+.footer-logo {
+  width: 60px;
+  display: block;
+  margin: 0 auto;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-    .nav-links {
-        flex-direction: column;
-        text-align: center;
-    }
-}
