@@ -1,7 +1,16 @@
-export const climateFacts = [
-  { text: "The last decade was the hottest in recorded history.", source: "https://climate.nasa.gov" },
-  { text: "Renewable energy is now the cheapest source of electricity in many countries.", source: "https://www.iea.org" },
-  { text: "Deforestation contributes around 10% of global carbon emissions.", source: "https://www.worldwildlife.org" },
-  { text: "About 8 million tons of plastic enter the ocean every year.", source: "https://www.unep.org" },
-  { text: "Heating and cooling buildings accounts for nearly 40% of energy use.", source: "https://www.energy.gov" }
+
+const facts = [
+  "Global temperatures have risen by 1.2°C since pre-industrial times.",
+  "Sea levels have risen about 8 inches since 1900.",
+  "Forest fires have increased in frequency and intensity due to climate change.",
+  "The Arctic sea ice extent has decreased by over 40% since 1979.",
+  "Human activities produce over 36 billion metric tons of CO2 each year."
 ];
+
+const button = document.getElementById("revealFactBtn");
+const container = document.getElementById("factContainer");
+
+button.addEventListener("click", () => {
+  const randomFact = facts[Math.floor(Math.random() * facts.length)];
+  container.textContent = randomFact;
+});
