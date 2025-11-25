@@ -159,5 +159,21 @@ footer .footer-logo {
     padding: 1rem;
   }
 }
+.fact-section {
+  margin-top: 1.5rem;      
+  text-align: center;      
+}
+
+#revealFactBtn {
+  margin-bottom: 1rem;     
+  padding: 0.5rem 1rem;    
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#factContainer {
+  font-weight: bold;
+  color: #004d40;
+}
 
 
