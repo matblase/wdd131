@@ -1,7 +1,7 @@
-export const tips = [
-    { tip: "Use reusable bags instead of plastic.", impact: 2 },
-    { tip: "Turn off lights when not in use.", impact: 1 },
-    { tip: "Recycle paper, glass, and metal.", impact: 2 },
-    { tip: "Bike or walk instead of driving.", impact: 3 },
-    { tip: "Plant trees or grow plants at home.", impact: 3 }
+export const climateFacts = [
+  { text: "The last decade was the hottest in recorded history.", source: "https://climate.nasa.gov" },
+  { text: "Renewable energy is now the cheapest source of electricity in many countries.", source: "https://www.iea.org" },
+  { text: "Deforestation contributes around 10% of global carbon emissions.", source: "https://www.worldwildlife.org" },
+  { text: "About 8 million tons of plastic enter the ocean every year.", source: "https://www.unep.org" },
+  { text: "Heating and cooling buildings accounts for nearly 40% of energy use.", source: "https://www.energy.gov" }
 ];
