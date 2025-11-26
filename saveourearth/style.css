@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -21,7 +22,6 @@ body {
   background-color: #001C55;
   flex-wrap: wrap; 
 }
-
 
 .nav-links {
   list-style: none;
@@ -41,16 +41,14 @@ body {
   text-decoration: underline;
 }
 
-
 .logo-container {
   flex: 1;
   text-align: center;
 }
 
 .logo-container .logo {
-  max-height: 60px; /* adjust as needed */
+  max-height: 60px; 
 }
-
 
 .left-links {
   justify-content: flex-start;
@@ -103,7 +101,8 @@ body {
 }
 
 
-button {
+#prevBtn,
+#nextBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -144,6 +143,31 @@ footer .footer-logo {
 }
 
 
+.fact-section {
+  margin-top: 2rem;
+  text-align: center; 
+}
+
+#revealFactBtn {
+  position: static;       
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#factContainer {
+  font-weight: bold;
+  color: #004d40;
+  text-align: center;
+}
+
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -158,22 +182,6 @@ footer .footer-logo {
   .hero {
     padding: 1rem;
   }
-}
-.fact-section {
-  margin-top: 1.5rem;      
-  text-align: center;      
-}
-
-#revealFactBtn {
-  margin-bottom: 1rem;     
-  padding: 0.5rem 1rem;    
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-#factContainer {
-  font-weight: bold;
-  color: #004d40;
 }
 
 
