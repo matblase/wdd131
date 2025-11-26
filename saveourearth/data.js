@@ -1,4 +1,3 @@
-
 export const facts = [
   { fact: "Global temperatures have risen by 1.2°C since pre-industrial times." },
   { fact: "Sea levels have risen about 8 inches since 1900." },
